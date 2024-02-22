@@ -1,0 +1,19 @@
+import requests
+
+# 替换成您的API密钥
+api_key = 'be39d3ccdb0b4567909e472380498a00'
+
+# 设置请求参数
+url = "https://newsapi.org/v2/everything"
+parameters = {
+    'q': 'Amazon',  # 替换成您的搜索关键词
+    'pageSize': 50,  # 您想要获取的文章数量，最多100
+    'apiKey': api_key
+}
+
+response = requests.get(url, params=parameters)
+data = response.json()  # 解析响应数据为JSON
+
+# 打印文章标题
+for article in data['articles']:
+    print(article['title'])
