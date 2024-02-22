@@ -1,5 +1,8 @@
 import requests
-
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+from nltk.sentiment import SentimentIntensityAnalyzer
 # 替换成您的API密钥
 api_key = 'be39d3ccdb0b4567909e472380498a00'
 
